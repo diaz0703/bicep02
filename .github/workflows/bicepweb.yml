@@ -1,0 +1,24 @@
+on: workflow_dispatch 
+name: DespliegueBicep
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZUREOCA_CREDENTIALS }}
+
+      # Deploy Bicep file
+    - name: deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: 'c588ffc0-36b0-4915-a137-28ed9f7b8ead'
+        resourceGroupName: 'gr_bicep'
+        template: ./ejemplo.bicep
+        parameters: 'laubicacion=centralus'
+        failOnStdErr: false
