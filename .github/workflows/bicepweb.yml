@@ -1,0 +1,24 @@
+on: workflow_dispatch 
+name: DespliegueBicep
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy Bicep file
+    - name: deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZUREOCA_CREDENTIALS }}
+        resourceGroupName: 'gr_bicep'
+        template: ./ejemplo.bicep
+        #parameters: 'storagePrefix=mystore storageSKU=Standard_LRS'
+        failOnStdErr: false
