@@ -17,7 +17,7 @@ jobs:
     - name: deploy
       uses: azure/arm-deploy@v1
       with:
-        subscriptionId: ${{ secrets.AZUREOCA_CREDENTIALS }}
+        subscriptionId: 'c588ffc0-36b0-4915-a137-28ed9f7b8ead'
         resourceGroupName: 'gr_bicep'
         template: ./ejemplo.bicep
         #parameters: 'storagePrefix=mystore storageSKU=Standard_LRS'
