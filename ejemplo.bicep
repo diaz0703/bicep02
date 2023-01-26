@@ -2,7 +2,7 @@
 param laubicacion string  = resourceGroup().location
 
 resource webserviceplan 'Microsoft.Web/serverfarms@2022-03-01' = {
-  name:'thorserviceplan0002'
+  name:'thorserviceplan0003'
   location: laubicacion
   tags:{
     oficina:'mexico'
@@ -16,7 +16,7 @@ resource webserviceplan 'Microsoft.Web/serverfarms@2022-03-01' = {
 
 
 resource servicewebapp 'Microsoft.Web/sites@2022-03-01' = {
-  name:'thorwebapp0002'
+  name:'thorwebapp0003'
   location: laubicacion
   properties:{
      serverFarmId:webserviceplan.id
