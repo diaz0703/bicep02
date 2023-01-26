@@ -14,11 +14,11 @@ jobs:
         creds: ${{ secrets.AZUREOCA_CREDENTIALS }}
 
       # Deploy Bicep file
-  #  - name: deploy
-  #    uses: azure/arm-deploy@v1
-  #    with:
-  #      subscriptionId: ${{ secrets.AZUREOCA_CREDENTIALS }}
-  #      resourceGroupName: 'gr_bicep'
-  #      template: ./ejemplo.bicep
+    - name: deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZUREOCA_CREDENTIALS }}
+        resourceGroupName: 'gr_bicep'
+        template: ./ejemplo.bicep
         #parameters: 'storagePrefix=mystore storageSKU=Standard_LRS'
-  #      failOnStdErr: false
+        failOnStdErr: false
