@@ -43,6 +43,7 @@ jobs:
 
   trabajo3:
     runs-on: ubuntu-latest
+    needs: [trabajo1,trabajo2]
     outputs:
       mivar2: resultado exitoso
     steps:
