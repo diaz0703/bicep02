@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: PROBANDOLASVARIABLESDE ${{github.actor}}
+name: PROBANDOLASVARIABLESDE 
 
 # Controls when the workflow will run
 on: 
@@ -30,4 +30,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build, pero aquí ${{env.nombresuscrip}}
-          echo test, and deploy your project.
+          echo test, and deploy your project. por fin $GITHUB_ACTOR
