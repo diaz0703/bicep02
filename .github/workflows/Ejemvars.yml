@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: PROBANDOLASVARIABLESDE $GITHUB_ACTOR
+name: PROBANDOLASVARIABLESDE ${{GITHUB_ACTOR}}
 
 # Controls when the workflow will run
 on: 
