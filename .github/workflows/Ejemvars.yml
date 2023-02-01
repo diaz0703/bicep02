@@ -31,3 +31,4 @@ jobs:
         run: |
           echo Add other actions to build, pero aquí ${{env.nombresuscrip}}
           echo test, and deploy your project. por fin $GITHUB_ACTOR
+          echo aquí mas datos como este ${{github.repository}}
