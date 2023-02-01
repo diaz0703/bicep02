@@ -43,8 +43,10 @@ jobs:
 
   trabajo3:
     runs-on: ubuntu-latest
+    outputs:
+      mivar2: resultado exitoso
     steps:
       - uses: actions/checkout@v3
       - name: Corretrabajo3paso1
-        run: echo es el último y se debe ver ${{jobs.trabajo3.steps.Corretrabajo3paso1.name}}
+        run: echo es el último y se debe ver ${{jobs.trabajo3.outputs.mivar2}}
 
