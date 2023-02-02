@@ -34,6 +34,14 @@ jobs:
           echo aquí mas datos como este ${{github.repository}}
           echo aquí ahora los secretos ${{secrets.AZUREOCA_CREDENTIALS}}
 
+      - name: Registra issue
+        if: ${{ failure() }}
+        run: |
+          echo Add other actions to build, pero aquí ${{env.nombresuscrip}}
+          #curl --requst POST 
+          echo aquí mas datos como este ${{github.repository}}
+          echo aquí ahora los secretos ${{secrets.AZUREOCA_CREDENTIALS}}
+
   trabajo2:
     runs-on: ubuntu-latest
     needs: [trabajo1]
