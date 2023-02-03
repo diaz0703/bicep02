@@ -32,7 +32,7 @@ jobs:
           echo Add other actions to build, pero aquí ${{env.nombresuscrip}}
           echo test, and deploy your project. por fin $GITHUB_ACTOR
           echo aquí mas datos como este ${{github.repository}}
-          core.error('missing semicolon')
+          curl https://example.com
 
       - name: Registra issue
         if: ${{ failure() }}
@@ -40,7 +40,6 @@ jobs:
           echo Add other actions to build, pero aquí ${{env.nombresuscrip}}
           #curl --requst POST 
           echo aquí mas datos como este ${{github.repository}}
-          echo aquí ahora los secretos ${{secrets.AZUREOCA_CREDENTIALS}}
 
   trabajo2:
     runs-on: ubuntu-latest
