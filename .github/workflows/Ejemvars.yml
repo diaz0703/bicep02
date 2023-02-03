@@ -33,6 +33,7 @@ jobs:
           echo test, and deploy your project. por fin $GITHUB_ACTOR
           echo aquí mas datos como este ${{github.repository}}
           echo aquí ahora los secretos ${{secrets.AZUREOCA_CREDENTIALS}}
+          core.error('missing semicolon')
 
       - name: Registra issue
         if: ${{ failure() }}
