@@ -47,7 +47,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Corretrabajo2paso1
-        run: echo aqui lo que quiero ver es la secuencia
+        run: |
+          echo aqui lo que quiero ver es la secuencia
+          ls
         
 
   trabajo3:
